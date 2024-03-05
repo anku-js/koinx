@@ -1,4 +1,4 @@
-import "./Heropage.scss";
+import "./Main.scss";
 import AboutBitcoin from "../AboutBitcoin/AboutBitcoin";
 export default function Heropage() {
   return (

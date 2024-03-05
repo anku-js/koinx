@@ -1,9 +1,9 @@
 .about-bitcoin {
   margin: 0 56px;
-  background-color: #fff;
   .about-bitcoin-container {
     padding: 23px 24px;
     border-radius: 8px;
+    background-color: #fff;
     .about-bitcoin-text {
       font-size: 24px;
       font-weight: 600;
@@ -40,7 +40,7 @@
     .about-bitcoin-section2 {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 30px;
       p {
         font-size: 16px;
         font-weight: 500;
@@ -88,8 +88,6 @@
               font-size: 14px;
               font-weight: 600;
               line-height: 28px;
-              letter-spacing: 0em;
-              text-align: left;
               display: flex;
               gap: 6px;
               align-items: center;
@@ -113,6 +111,77 @@
         font-weight: 500;
         line-height: 26px;
         color: #3e424a;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .about-bitcoin {
+    margin: 0 14px;
+    .about-bitcoin-container {
+      padding: 16px 10px;
+      border: 1px solid #dee1e6;
+      .about-bitcoin-text {
+        margin-bottom: 16px;
+      }
+      .about-bitcoin-section1 {
+        h2 {
+          line-height: 26px;
+        }
+        p {
+          font-weight: 400;
+          margin-bottom: 10px;
+        }
+      }
+      hr {
+        display: none;
+      }
+      h2 {
+        line-height: 26px;
+      }
+      .about-bitcoin-section2 {
+        p {
+          font-weight: 400;
+        }
+      }
+      .about-bitcoin-section3 {
+        h1 {
+          font-size: 18px;
+          line-height: 26px;
+          font-weight: 700;
+          margin-top: 10px;
+        }
+        .card-container {
+          flex-direction: column;
+          gap: 15px;
+          .card1,
+          .card2 {
+            padding: 11.2px;
+            gap: 26px;
+            img {
+              width: 120px;
+              height: 120px;
+            }
+            .card-text {
+              gap: 15px;
+              p {
+                font-size: 18px;
+                line-height: 26px;
+              }
+              button {
+                padding: 0 13px;
+                font-size: 13px;
+                line-height: 26px;
+                gap: 4px;
+              }
+            }
+          }
+        }
+        p {
+          margin-top: 10px;
+          font-weight: 400;
+        }
       }
     }
   }

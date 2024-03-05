@@ -1,0 +1,119 @@
+.about-bitcoin {
+  margin: 0 56px;
+  background-color: #fff;
+  .about-bitcoin-container {
+    padding: 23px 24px;
+    border-radius: 8px;
+    .about-bitcoin-text {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 29px;
+      color: #0f1629;
+      margin-bottom: 25px;
+    }
+    .about-bitcoin-section1 {
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        color: #0b1426;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        color: #3e424a;
+      }
+    }
+    hr {
+      margin: 15px 0;
+      color: #c9cfdd99;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22px;
+      color: #0b1426;
+      margin-bottom: 10px;
+    }
+    .about-bitcoin-section2 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        color: #3e424a;
+      }
+    }
+    .about-bitcoin-section3 {
+      h1 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        color: #0f1629;
+        margin-bottom: 8px;
+      }
+      .card-container {
+        display: flex;
+        gap: 31px;
+        .card1,
+        .card2 {
+          padding: 12px;
+          border-radius: 6.65px;
+          display: flex;
+          gap: 27.61px;
+          color: #fff;
+          img {
+            border-radius: 8px;
+          }
+          .card-text {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            p {
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 28px;
+              letter-spacing: 0em;
+              color: #fff;
+            }
+            button {
+              border: none;
+              border-radius: 8px;
+              padding: 2px 14px;
+              width: fit-content;
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 28px;
+              letter-spacing: 0em;
+              text-align: left;
+              display: flex;
+              gap: 6px;
+              align-items: center;
+              cursor: pointer;
+            }
+          }
+        }
+        .card1 {
+          background: linear-gradient(135deg, #79f1a4 0%, #0e5cad 100%);
+        }
+        .card2 {
+          background: linear-gradient(135.73deg, #ff9865 0%, #ef3031 110.55%);
+        }
+      }
+      hr {
+        margin: 15px 0;
+        color: #c9cfdd99;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        color: #3e424a;
+      }
+    }
+  }
+}

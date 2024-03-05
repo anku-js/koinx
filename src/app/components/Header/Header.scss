@@ -11,17 +11,16 @@ header {
     justify-content: space-between;
     align-items: center;
     .logo {
-        img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-        }
+      img {
+        display: block;
+        max-width: 100%;
+      }
     }
     .navigation {
       display: flex;
       align-items: center;
       gap: 45px;
-      .nav-links {
+      .nav-list {
         display: flex;
         gap: 32px;
         a {
@@ -29,7 +28,7 @@ header {
           font-weight: 600;
           line-height: 19.36px;
           letter-spacing: -0.01em;
-          color: #0F1629;
+          color: #0f1629;
         }
       }
       button {
@@ -42,6 +41,73 @@ header {
         line-height: 19.36px;
         letter-spacing: -0.01em;
         cursor: pointer;
+      }
+    }
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all ease ease-in-out;
+        transition: all ease ease-in-out;
+        background-color: #000;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  header {
+    .header-container {
+      padding: 0 24px;
+      .logo {
+        img {
+          width: 81px;
+          height: 60.75px;
+        }
+      }
+      .navigation {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        margin: 0;
+        opacity: 0;
+        top: 61.75px;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        gap: 0px;
+        left: 0;
+        .nav-list {
+          width: 100%;
+          flex-direction: column;
+          gap: 5px;
+          a {
+            border-bottom: solid 1px #c0bdbd;
+            padding: 10px;
+          }
+        }
+        button {
+          width: 100%;
+        }
+      }
+      .navigation.active {
+        opacity: 1;
+      }
+      .hamburger {
+        display: block;
+      }
+      .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
       }
     }
   }

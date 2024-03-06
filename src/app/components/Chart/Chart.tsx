@@ -1,8 +1,8 @@
 // // TradingViewWidget.jsx
 "use client";
 import "./Chart.scss";
-
 import React, { useEffect, useState, useRef, memo } from "react";
+import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi";
 
 function TradingViewWidget() {
   const container = useRef();
@@ -15,7 +15,8 @@ function TradingViewWidget() {
       .then((res) => res.json())
       .then((data) => setDataFromApi(data));
   }, []);
-console.log(dataFromApi)
+
+  console.log(dataFromApi);
   useEffect(() => {
     if (!document.getElementById("tradingview-widget-script")) {
       const script = document.createElement("script");
@@ -29,7 +30,7 @@ console.log(dataFromApi)
           "autosize": true,
           "symbol": "BITSTAMP:BTCUSD",
           "timezone": "Etc/UTC",
-   
+          "hide_legend": true,
           "theme": "light",
           "style": "2",
           "locale": "en",
@@ -48,16 +49,51 @@ console.log(dataFromApi)
   }, []);
 
   return (
-    <div className="chart-container">
-      <div
-        className="tradingview-widget-container"
-        ref={container}
-        style={{ height: "100%", width: "100%" }}
-      >
+    <div className="chart">
+      <div className="chart-container">
+        <div className="chart-header">
+          <div className="chart-heading">
+            <img src="/images/img4.jpg" className="bitcoin-icon" />
+            <h1>Bitcoin </h1>
+            <p>BTC</p>
+          </div>
+          <div className="chart-details-usd">
+            <h1>$ {dataFromApi?.bitcoin?.usd}</h1>
+            <div
+              className="usd-percent-change"
+              style={{
+                backgroundColor:
+                  dataFromApi?.bitcoin?.usd_24h_change < 0
+                    ? "#f9c3c3"
+                    : "#ebf9f4",
+                color:
+                  dataFromApi?.bitcoin?.usd_24h_change < 0
+                    ? "#cb3737"
+                    : "#285c4a",
+              }}
+            >
+              {dataFromApi?.bitcoin?.usd_24h_change < 0 ? (
+                <BiSolidDownArrow />
+              ) : (
+                <BiSolidUpArrow />
+              )}
+              {dataFromApi?.bitcoin?.usd_24h_change.toFixed(2)}%
+            </div>
+            <p>(24H)</p>
+          </div>
+          <div className="chart-details-inr">₹ {dataFromApi?.bitcoin?.inr}</div>
+        </div>
         <div
-          className="tradingview-widget-container__widget"
-          style={{ height: "calc(100% - 32px)", width: "100%" }}
-        ></div>
+          className="tradingview-widget-container"
+          ref={container}
+          style={{ height: "100%", width: "100%" }}
+        >
+            <p>Bitcoin Price Chart (USD)</p>
+          <div
+            className="tradingview-widget-container__widget"
+            style={{ height: "calc(100% - 32px)", width: "100%" }}
+          ></div>
+        </div>
       </div>
     </div>
   );

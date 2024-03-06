@@ -16,7 +16,7 @@ export default function AboutBitcoin() {
             of 19.24 M BTC and a max supply of 21 M BTC.
           </p>
         </div>
-        <hr></hr>
+        {/* <hr></hr> */}
         <h2>Lorem ipsum dolor sit amet</h2>
         <div className="about-bitcoin-section2">
           <p>
@@ -45,7 +45,6 @@ export default function AboutBitcoin() {
             eget. Ullamcorper dui
           </p>
         </div>
-        <hr></hr>
         <div className="about-bitcoin-section3">
           <h1>Already Holding Bitcoin?</h1>
           <div className="card-container">
@@ -72,7 +71,6 @@ export default function AboutBitcoin() {
               </div>
             </div>
           </div>
-          <hr></hr>
           <p>
             Fermentum hendrerit imperdiet nulla viverra faucibus. Sit aliquam
             massa vel convallis duis ac. Mi adipiscing semper scelerisque

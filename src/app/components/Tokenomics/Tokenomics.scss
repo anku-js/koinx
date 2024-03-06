@@ -1,0 +1,61 @@
+.tokenomics {
+  margin: 0 56px;
+  .tokenomics-container {
+    padding: 24px;
+    border-radius: 8px;
+    background-color: #fff;
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 29px;
+      margin-bottom: 25px;
+      color: #0f1629;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 36px;
+      color: #1d1d1d;
+    }
+    .statistics-container {
+      padding: 15.5px 0;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      .statistics-description {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        p {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 20px;
+          color: #202020;
+          .statistics-description-point1,
+          .statistics-description-point2 {
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+          }
+          .statistics-description-point1 {
+            background-color: #0082ff;
+          }
+          .statistics-description-point2 {
+            background-color: #faa002;
+          }
+        }
+      }
+    }
+    .tokenomics-text {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 26px;
+      color: #3e424a;
+      margin-bottom: 36px;
+    }
+  }
+}

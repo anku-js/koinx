@@ -1,5 +1,4 @@
 .chart {
-  margin: 0 56px;
   .chart-container {
     padding: 24px;
     background-color: #fff;
@@ -72,7 +71,6 @@
 
 @media screen and (max-width: 420px) {
   .chart {
-    margin: 0 14px;
     .chart-container {
       padding: 16px 10px;
       border: 1px solid #dee1e6;

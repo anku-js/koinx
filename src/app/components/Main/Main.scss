@@ -1,6 +1,19 @@
+body {
+  background-color: #eff2f5;
+}
 .main-container {
-    background-color: #EFF2F5;
+  margin: 20px 56px;
+  display: flex;
+  gap: 20px;
+  .content-left {
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+  .content-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
+

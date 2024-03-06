@@ -1,0 +1,73 @@
+.trendingToken {
+  max-width: 427px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 8px;
+  background: #fff;
+  h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0;
+    margin-bottom: 24px;
+    color: #0f1629;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      .tokenInfo {
+        display: flex;
+        align-items: center;
+        .tokenImg {
+          width: 24px;
+          height: 24px;
+          margin-right: 6px;
+          img {
+            max-width: 100%;
+            border-radius: 50%;
+          }
+        }
+        .tokenName {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #0f1629;
+          margin: 0;
+          width: 240px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+      .token24hrChange {
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .token24hrChange.up {
+        background: #ebf9f4;
+        color: #14b079;
+      }
+
+      .token24hrChange.down {
+        background: #faeff1;
+        color: #f7324c;
+      }
+    }
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

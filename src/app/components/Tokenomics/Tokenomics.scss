@@ -59,3 +59,27 @@
     }
   }
 }
+
+@media screen and (max-width: 420px) {
+  .tokenomics {
+    margin: 0 14px;
+    .tokenomics-container {
+      padding: 16px 10px;
+      border: 1px solid #dee1e6;
+      h1 {
+        margin-bottom: 16px;
+      }
+      h2 {
+        line-height: 26px;
+      }
+      .statistics-container  {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .tokenomics-text  {
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

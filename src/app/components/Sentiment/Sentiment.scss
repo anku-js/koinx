@@ -1,0 +1,169 @@
+.sentiment {
+  .sentiment-container {
+    padding: 24px;
+    border-radius: 8px;
+    background-color: #fff;
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 29px;
+      color: #0f1629;
+    }
+    .keyEvent-cont {
+      padding: 17px 0;
+      h2 {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 20px;
+        color: #44475b;
+        margin-bottom: 17px;
+        .info-logo {
+          width: 16.67px;
+          height: 16.67px;
+          color: #7c7e8c;
+        }
+      }
+      .keyEvent-list {
+        display: flex;
+        gap: 14px;
+        li {
+          background-color: #e8f4fd;
+          border-radius: 12px;
+        }
+        .event-info {
+          padding: 18px;
+          display: flex;
+          gap: 8px;
+          .title-description {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            .title {
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 20px;
+              color: #191c1f;
+            }
+            .description {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 20px;
+              color: #3e5765;
+            }
+          }
+        }
+      }
+    }
+    .analysis {
+      h2 {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-top: 15px;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 20px;
+        color: #44475b;
+        .info-logo {
+          width: 16.67px;
+          height: 16.67px;
+          color: #7c7e8c;
+        }
+      }
+      .analysis-container {
+        padding: 24px 0;
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        .analysis-percent {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 36px;
+          font-weight: 500;
+          line-height: 44px;
+          color: #0fba83;
+          background-color: #ebf9f4;
+          border-radius: 50%;
+          width: 120px;
+          height: 120px;
+        }
+        .analysis-info {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 6px;
+          width: 100%;
+          .action {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            .action-name {
+              font-size: 15px;
+              font-weight: 500;
+              line-height: 22px;
+              color: #7c7e8c;
+            }
+            .action-data {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 22px;
+              color: #7c7e8c;
+              width: 100%;
+              .buy-percent {
+                display: block;
+                width: 76%;
+                height: 8px;
+                border-radius: 2px;
+                background-color: #00b386;
+              }
+              .hold-percent {
+                width: 8%;
+                height: 8px;
+                border-radius: 2px;
+                background-color: #c7c8ce;
+              }
+              .sell-percent {
+                width: 16%;
+                height: 8px;
+                border-radius: 2px;
+                background-color: #f7324c;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .sentiment {
+    .sentiment-container {
+      padding: 16px 10px;
+      border: 1px solid #dee1e6;
+      .keyEvent-cont {
+        .keyEvent-list {
+          flex-direction: column;
+        }
+      }
+      .analysis {
+        .analysis-container {
+          gap: 10px;
+          .analysis-percent {
+            font-size: 26px;
+            width: 100px;
+            height: 80px;
+          }
+        }
+      }
+    }
+  }
+}

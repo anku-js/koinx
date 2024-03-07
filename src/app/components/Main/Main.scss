@@ -2,13 +2,14 @@ body {
   background-color: #eff2f5;
 }
 .main-container {
-  margin: 20px 56px;
+  margin: 52px 56px;
   display: flex;
   gap: 20px;
   .content-left {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
   }
   .content-right {
     display: flex;
@@ -17,10 +18,21 @@ body {
   }
 }
 
+.coinSliderContainer {
+  padding: 68px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: #fff;
+}
+
 @media screen and (max-width: 420px) {
   .main-container {
-    margin: 20px 14px;
+    margin: 52px 14px;
     flex-direction: column;
+  }
+  .coinSliderContainer {
+    padding: 32px 20px;
   }
 }
 

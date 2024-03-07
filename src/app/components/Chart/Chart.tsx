@@ -1,23 +1,40 @@
-// // TradingViewWidget.jsx
 "use client";
 import "./Chart.scss";
-import React, { useEffect, useState, useRef, memo } from "react";
+import React, { useEffect, useState, useRef, memo, ElementRef } from "react";
 import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi";
 
+interface Response {
+  bitcoin: {
+    inr: number;
+    usd: number;
+    usd_24h_change: number
+  }
+}
+
+const InitialData = {
+  bitcoin: {
+    inr: 0,
+    usd: 0,
+    usd_24h_change: 0,
+  }
+}
+
 function TradingViewWidget() {
-  const container = useRef();
-  const [dataFromApi, setDataFromApi] = useState();
+  const container: React.RefObject<HTMLInputElement> = useRef(null);
+  const [dataFromApi, setDataFromApi] = useState<Response>(InitialData);
 
   useEffect(function () {
     fetch(
       "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=inr%2Cusd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true"
     )
       .then((res) => res.json())
-      .then((data) => setDataFromApi(data));
+      .then((data) => {
+        setDataFromApi(data);
+      });
   }, []);
 
   useEffect(() => {
-    if (!document.getElementById("tradingview-widget-script")) {
+    if (!document.getElementById("tradingview-widget-script") && container?.current) {
       const script = document.createElement("script");
       script.src =
         "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";

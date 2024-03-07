@@ -81,6 +81,7 @@ header {
         text-align: center;
         gap: 0px;
         left: 0;
+        z-index: 2;
         .nav-list {
           width: 100%;
           flex-direction: column;
@@ -92,6 +93,7 @@ header {
         }
         button {
           width: 100%;
+          margin: 0 20px;
         }
       }
       .navigation.active {

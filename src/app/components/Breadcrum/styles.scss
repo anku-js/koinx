@@ -1,0 +1,20 @@
+nav {
+    position: absolute;
+    top: -30px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    a {
+        text-decoration: none;
+    }
+
+    .breadcrumb-item {
+        display: flex;
+        svg {
+            margin: 0 10px;
+            color: #3E5765;
+        }
+    }
+}

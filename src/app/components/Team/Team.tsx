@@ -1,33 +1,14 @@
 import "./Team.scss";
 
-const teamMemberInfo = [
-  {
-    id: 1,
-    name: "John Smith",
-    designation: "Designation here",
-    image: "/images/Team1.jpg",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. In justo rutrum sit sit fermentum ut libero hendrerit id. Tellus sit ornare netus sagittis in nunc convallis mattis maecenas. Tempus arcu leo sociis laoreet nec neque sed pellentesque viverra. Consectetur proin amet ut id facilisi quis consectetur. Tellus gravida ultricies feugiat sed eu egestas dolor est ipsum. Malesuada etiam mi gravida praesent interdu",
-  },
-  {
-    id: 2,
-    name: "Elina Williams",
-    designation: "Designation here",
-    image: "/images/Team2.jpg",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. In justo rutrum sit sit fermentum ut libero hendrerit id. Tellus sit ornare netus sagittis in nunc convallis mattis maecenas. Tempus arcu leo sociis laoreet nec neque sed pellentesque viverra. Consectetur proin amet ut id facilisi quis consectetur. Tellus gravida ultricies feugiat sed eu egestas dolor est ipsum. Malesuada etiam mi gravida praesent interdu",
-  },
-  {
-    id: 3,
-    name: "John Smith",
-    designation: "Designation here",
-    image: "/images/Team3.jpg",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. In justo rutrum sit sit fermentum ut libero hendrerit id. Tellus sit ornare netus sagittis in nunc convallis mattis maecenas. Tempus arcu leo sociis laoreet nec neque sed pellentesque viverra. Consectetur proin amet ut id facilisi quis consectetur. Tellus gravida ultricies feugiat sed eu egestas dolor est ipsum. Malesuada etiam mi gravida praesent interdu",
-  },
-];
+interface Team { 
+  id: number;
+  name: string;
+  designation: string;
+  image: string;
+  description: string;
+}
 
-const Team = () => {
+const Team = ({ teamMemberInfo }: { teamMemberInfo: Team[]}) => {
   return (
     <div className="team">
       <h3>Team</h3>

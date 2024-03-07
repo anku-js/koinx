@@ -45,7 +45,6 @@
         }
       }
       .token24hrChange {
-        font-family: Inter;
         font-weight: 500;
         font-size: 16px;
         line-height: 20px;
@@ -54,6 +53,9 @@
         display: flex;
         align-items: center;
         gap: 8px;
+        span {
+          display: flex;
+        }
       }
       .token24hrChange.up {
         background: #ebf9f4;

@@ -1,11 +1,12 @@
 import "./Performance.scss";
 import { BsInfoCircleFill } from "react-icons/bs";
+import RangeSlider from "../RangeSlider/RangeSlider";
 
 export default function Performance() {
   return (
     <>
       <div className="navigation-tab">
-        <a>Overview</a>
+        <a className="active">Overview</a>
         <a>Fundamentals</a>
         <a>News Insights</a>
         <a>Sentiments</a>
@@ -22,11 +23,12 @@ export default function Performance() {
                 <p className="heading">Today’s Low</p>
                 <p className="price">46,930.22</p>
               </div>
+              {/* <RangeSlider /> */}
               <input
                 type="range"
-                min="46,930.22"
-                max="49,343.83"
-                value="$48,637.83"
+                min="46930.22"
+                max="49343.83"
+                value="48637.83"
                 className="slider"
                 id="myRange"
                 disabled
@@ -43,9 +45,9 @@ export default function Performance() {
               </div>
               <input
                 type="range"
-                //   min="1"
-                //   max="100"
-                //   value="90"
+                min="46930.22"
+                max="49343.83"
+                value="47637.83"
                 className="slider"
                 id="myRange"
                 disabled

@@ -1,33 +1,37 @@
 import "./Tokenomics.scss";
 
-export default function Tokenomics() {
+interface Props {
+  tokenomicsDetails: {
+    heading: string;
+    heading2: string;
+    img: string;
+    investors: string;
+    foundation: string;
+    description: string;
+  }
+}
+
+export default function Tokenomics({tokenomicsDetails}: Props) {
+  const { heading, heading2, img, investors, foundation, description } = tokenomicsDetails;
   return (
     <div className="tokenomics">
       <div className="tokenomics-container">
-        <h1>Tokenomics</h1>
-        <h2>Initial Distribution</h2>
+        <h1>{heading}</h1>
+        <h2>{heading2}</h2>
         <div className="statistics-container">
-          <img src="/images/img3.jpg" alt="pie chart"/>
+          <img src={img} alt="pie chart" />
           <div className="statistics-description">
             <p>
-              <span className="statistics-description-point1"></span>Crowdsale
-              investors: 80%
+              <span className="statistics-description-point1"></span>
+              {investors}
             </p>
             <p>
-              <span className="statistics-description-point2"></span>Foundation: 20%
+              <span className="statistics-description-point2"></span>
+              {foundation}
             </p>
           </div>
         </div>
-        <p className="tokenomics-text">
-          Lorem ipsum dolor sit amet consectetur. Cras aliquet tristique ornare
-          vestibulum nunc dignissim vel consequat. Leo etiam nascetur bibendum
-          amet enim sit eget leo amet. At metus orci augue fusce eleifend lectus
-          eu fusce adipiscing. Volutpat ultrices nibh sodales massa habitasse
-          urna felis augue. Gravida aliquam fermentum augue eu. Imperdiet
-          bibendum amet aliquam donec. Eget justo dui metus odio rutrum. Vel
-          ipsum eget in at curabitur sem posuere facilisis vitae. Sed lorem sit
-          mauris id eget arcu ut. Vulputate ipsum aliquet odio nisi eu ac risus.
-        </p>
+        <p className="tokenomics-text">{description}</p>
       </div>
     </div>
   );

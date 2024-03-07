@@ -1,0 +1,83 @@
+.coinSlider {
+  padding: 0 24px;
+  border-radius: 8px;
+  background-color: #fff;
+  position: relative;
+  justify-content: space-between;
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #202020;
+  }
+  .coinsList {
+    display: flex;
+    gap: 16px;
+  }
+  .swiper-wrapper {
+    height: auto;
+    padding-top: 20px;
+    .swiper-slide {
+      margin-right: 10px;
+    }
+  }
+}
+
+.coin-card {
+  border: 1px solid #e3e3e3;
+  width: 252px;
+  border-radius: 8px;
+  padding: 16px;
+  box-sizing: border-box;
+  .coin-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .symbol {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      color: #202020;
+    }
+    .percentChange {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 15px;
+    }
+  }
+  .currentPrice {
+    margin: 12px 0 0 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #171717;
+  }
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  cursor: pointer;
+  right: 0;
+}
+
+.prev.disabled,
+.next.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 420px) {
+  .coin-card {
+    margin: 0 auto;
+  }
+}

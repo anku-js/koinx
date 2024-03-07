@@ -50,7 +50,12 @@ export default function AboutBitcoin() {
           <div className="card-container">
             <div className="card1">
               <div className="card-img">
-                <img src="/images/img1.jpg" width="128" height="128" />
+                <img
+                  src="/images/img1.jpg"
+                  alt="Calculate your Profits banner"
+                  width="128"
+                  height="128"
+                />
               </div>
               <div className="card-text">
                 <p>Calculate your Profits</p>
@@ -61,7 +66,12 @@ export default function AboutBitcoin() {
             </div>
             <div className="card2">
               <div className="card-img">
-                <img src="/images/img2.jpg" />
+                <img
+                  src="/images/img2.jpg"
+                  alt="Calculate your liability banner"
+                  width="128"
+                  height="128"
+                />
               </div>
               <div className="card-text">
                 <p>Calculate your liability</p>

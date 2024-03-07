@@ -7,7 +7,7 @@ export default function Tokenomics() {
         <h1>Tokenomics</h1>
         <h2>Initial Distribution</h2>
         <div className="statistics-container">
-          <img src="/images/img3.jpg" />
+          <img src="/images/img3.jpg" alt="pie chart"/>
           <div className="statistics-description">
             <p>
               <span className="statistics-description-point1"></span>Crowdsale

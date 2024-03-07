@@ -13,16 +13,14 @@ export default function Header() {
         <div className="logo">
           <img
             src="/images/logo.jpg"
+            alt="koinX logo"
             className="company-logo"
             width="96"
             height="72"
           />
         </div>
         <div className={`navigation ${hamburgerActive ? "active" : ""}`}>
-          <div
-            className="nav-list"
-            onClick={handleClick}
-          >
+          <div className="nav-list" onClick={handleClick}>
             <a href="#">Crypto Taxes</a>
             <a href="#">Free Tools</a>
             <a href="#">Resource Center</a>

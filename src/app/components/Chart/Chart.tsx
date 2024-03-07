@@ -10,13 +10,12 @@ function TradingViewWidget() {
 
   useEffect(function () {
     fetch(
-      "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=inr%2Cusd&include_24hr_change=true"
+      "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=inr%2Cusd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true"
     )
       .then((res) => res.json())
       .then((data) => setDataFromApi(data));
   }, []);
 
-  console.log(dataFromApi);
   useEffect(() => {
     if (!document.getElementById("tradingview-widget-script")) {
       const script = document.createElement("script");
@@ -53,9 +52,14 @@ function TradingViewWidget() {
       <div className="chart-container">
         <div className="chart-header">
           <div className="chart-heading">
-            <img src="/images/img4.jpg" className="bitcoin-icon" />
+            <img
+              src="/images/img4.jpg"
+              alt="bitcoin icon"
+              className="bitcoin-icon"
+            />
             <h1>Bitcoin </h1>
-            <p>BTC</p>
+            <p className="btc">BTC</p>
+            <p className="rank1">Rank #1</p>
           </div>
           <div className="chart-details-usd">
             <h1>$ {dataFromApi?.bitcoin?.usd}</h1>
@@ -88,7 +92,7 @@ function TradingViewWidget() {
           ref={container}
           style={{ height: "100%", width: "100%" }}
         >
-            <p>Bitcoin Price Chart (USD)</p>
+          <p>Bitcoin Price Chart (USD)</p>
           <div
             className="tradingview-widget-container__widget"
             style={{ height: "calc(100% - 32px)", width: "100%" }}

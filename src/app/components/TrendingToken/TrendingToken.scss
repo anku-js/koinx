@@ -1,5 +1,5 @@
 .trendingToken {
-  max-width: 427px;
+  min-width: 427px;
   box-sizing: border-box;
   padding: 24px;
   border-radius: 8px;
@@ -70,3 +70,11 @@
     }
   }
 }
+
+@media screen and (max-width:420px) {
+  .trendingToken {
+    min-width: fit-content;
+  }
+}
+
+

@@ -1,10 +1,11 @@
 import "./Main.scss";
-import AboutBitcoin from "../AboutBitcoin/AboutBitcoin";
-import Tokenomics from "../Tokenomics/Tokenomics";
 import TradingViewWidget from "../Chart/Chart";
 import CallToAction from "../CallToAction/CallToAction";
 import TrendingTokens from "../TrendingToken/TrendingToken";
 import Performance from "../Performance/Performance";
+import AboutBitcoin from "../AboutBitcoin/AboutBitcoin";
+import Tokenomics from "../Tokenomics/Tokenomics";
+import Team from "../Team/Team";
 export default function Heropage() {
   return (
     <div>
@@ -14,6 +15,7 @@ export default function Heropage() {
           <Performance />
           <AboutBitcoin />
           <Tokenomics />
+          <Team />
         </section>
         <section className="content-right">
           <CallToAction />

@@ -1,6 +1,5 @@
 import "./Performance.scss";
 import { BsInfoCircleFill } from "react-icons/bs";
-import RangeSlider from "../RangeSlider/RangeSlider";
 
 export default function Performance() {
   return (
@@ -23,7 +22,6 @@ export default function Performance() {
                 <p className="heading">Today’s Low</p>
                 <p className="price">46,930.22</p>
               </div>
-              {/* <RangeSlider /> */}
               <input
                 type="range"
                 min="46930.22"

@@ -17,3 +17,10 @@ body {
   }
 }
 
+@media screen and (max-width: 420px) {
+  .main-container {
+    margin: 20px 14px;
+    flex-direction: column;
+  }
+}
+

@@ -155,7 +155,7 @@
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 768px) {
   .navigation-tab {
     flex-direction: column;
     gap: 5px;
@@ -185,8 +185,6 @@
 
           .fundamentals-table {
             width: 100%;
-            .fundamentals-li {
-            }
           }
         }
       }
